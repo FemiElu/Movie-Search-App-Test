@@ -27,6 +27,7 @@ function App() {
     fetchMovies(); 
   },[])
   const onTextChange = (e) => { 
+    setSelectedMovie("")
     clearTimeout(timeoutId); 
     setSearchQuery(e.target.value); 
     const timeout = setTimeout(()=>fetchMovies(e.target.value), 500);
